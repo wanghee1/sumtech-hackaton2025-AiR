@@ -10,4 +10,4 @@ AI 기반 위험 예측 시스템이 운전자의 시야 밖 잠재적 위협까
 3. python ./communication/websocket_server.py -> 웹소켓 서버
 4. python gps_service.py -> 홀로렌즈로 gps 데이터 보내는 곳 + 아이폰 센서로거
 5. python ai_main2.py -> yolo + 웹캠으로 물체 인식
-6. python tts.py
+6. python tts.py + python map_search.py + python stt.py -> tts-주변 장소 검색-stt
