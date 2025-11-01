@@ -1,0 +1,108 @@
+<result>
+<record>
+<incidentId>L90163239098</incidentId>
+<incidenteTypeCd>1</incidenteTypeCd>
+<incidenteSubTypeCd>8</incidenteSubTypeCd>
+<addressJibun>경기 안산시 상록구</addressJibun>
+<addressJibunCd>4127310900</addressJibunCd>
+<addressNew/>
+<linkId>2240898100</linkId>
+<locationDataX>126.840515</locationDataX>
+<locationDataY>37.296131</locationDataY>
+<locationTypeCd>C0101</locationTypeCd>
+<locationData>POINT(126.296155 37.840477)</locationData>
+<incidenteTrafficCd>A0503</incidenteTrafficCd>
+<incidenteGradeCd>A0402</incidenteGradeCd>
+<incidentTitle>[사고] 라이언스홀 앞 사거리 갓길 차량고장 라이언스홀 → LG이노텍 방향, [차량고장]  라이언스홀 → LG이노텍 방향 갓길 통제 , 차량고장</incidentTitle>
+<incTrafficCode>A0503</incTrafficCode>
+<incidentRegionCd>01</incidentRegionCd>
+<startDate>2025년 10월 30일 14시 32분</startDate>
+<endDate>2025년 10월 31일 15시 02분</endDate>
+<lane>갓길</lane>
+<roadName>한양대학로55</roadName>
+<sourceCode>K000</sourceCode>
+<lineLinkId>null</lineLinkId>
+<controlType>0</controlType>
+<important>00</important>
+<updateDate>2025년 10월 30일 14시 42분</updateDate>
+</record>
+<record>
+<incidentId>L93163239251</incidentId>
+<incidenteTypeCd>1</incidenteTypeCd>
+<incidenteSubTypeCd>8</incidenteSubTypeCd>
+<addressJibun>경기 안산시 상록구 해양동</addressJibun>
+<addressJibunCd>1165010200</addressJibunCd>
+<addressNew/>
+<linkId>1210002900</linkId>
+<locationDataX>126.8412205</locationDataX>
+<locationDataY>37.2958343</locationDataY>
+<locationTypeCd>C0101</locationTypeCd>
+<locationData/>
+<incidenteTrafficCd>A0503</incidenteTrafficCd>
+<incidenteGradeCd>A0402</incidenteGradeCd>
+<incidentTitle>[사고] 한양대 에리카 후문 방향 차량사고 학연산 → 후문 방향 </incidentTitle>
+<incTrafficCode>A0503</incTrafficCode>
+<incidentRegionCd>01</incidentRegionCd>
+<startDate>2025년 10월 30일 14시 37분</startDate>
+<endDate>2025년 10월 31일 15시 07분</endDate>
+<lane>3차로</lane>
+<roadName>한양대학로55</roadName>
+<sourceCode>S000</sourceCode>
+<lineLinkId>1210002900</lineLinkId>
+<controlType>0</controlType>
+<important>00</important>
+<updateDate/>
+</record>
+<record>
+<incidentId>L91163237911</incidentId>
+<incidenteTypeCd>1</incidenteTypeCd>
+<incidenteSubTypeCd>8</incidenteSubTypeCd>
+<addressJibun>경기 안산시 상록구 해양동</addressJibun>
+<addressJibunCd>5214041023</addressJibunCd>
+<addressNew/>
+<linkId>3080414300</linkId>
+<locationDataX>126.8412205</locationDataX>
+<locationDataY>37.2958343</locationDataY>
+<locationTypeCd>C0101</locationTypeCd>
+<incidenteTrafficCd>A0502</incidenteTrafficCd>
+<incidenteGradeCd>A0402</incidenteGradeCd>
+<incidentTitle>[사고] 호수공원 사거리 추돌사고 호수공원 → 디자인관 통제 </incidentTitle>
+<incTrafficCode>A0502</incTrafficCode>
+<incidentRegionCd>33</incidentRegionCd>
+<startDate>2025년 10월 30일 14시 20분</startDate>
+<endDate>2025년 10월 31일 14시 50분</endDate>
+<lane>종점방향</lane>
+<roadName>한양대학로55</roadName>
+<sourceCode>H000</sourceCode>
+<lineLinkId>null</lineLinkId>
+<controlType>0</controlType>
+<important>00</important>
+<updateDate/>
+</record>
+<record>
+<incidentId>L91163237911</incidentId>
+<incidenteTypeCd>2</incidenteTypeCd>
+<incidenteSubTypeCd>8</incidenteSubTypeCd>
+<addressJibun>경기 안산시 상록구 해양동</addressJibun>
+<addressJibunCd>5214041023</addressJibunCd>
+<addressNew/>
+<linkId>3080414300</linkId>
+<locationDataX>126.838844</locationDataX>
+<locationDataY>37.295459</locationDataY>
+<locationTypeCd>C0101</locationTypeCd>
+<incidenteTrafficCd>A0502</incidenteTrafficCd>
+<incidenteGradeCd>A0402</incidenteGradeCd>
+<incidentTitle>[공사] 신축공사 라이언스홀 → 기숙사 거리 통제 </incidentTitle>
+<incTrafficCode>A0502</incTrafficCode>
+<incidentRegionCd>33</incidentRegionCd>
+<startDate>2025년 10월 30일 14시 20분</startDate>
+<endDate>2025년 10월 31일 14시 50분</endDate>
+<lane>갓길</lane>
+<roadName>한양대학로55</roadName>
+<sourceCode>H000</sourceCode>
+<lineLinkId>null</lineLinkId>
+<controlType>0</controlType>
+<important>00</important>
+<updateDate/>
+</record>
+</result>
