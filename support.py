@@ -1,26 +1,36 @@
 import google.generativeai as genai
-import os
-from dotenv import load_dotenv  # ⭐️ [추가] 1. dotenv 라이브러리 임포트
+import config 
 
-# ⭐️ [추가] 2. .env 파일에서 환경 변수를 불러옵니다
-load_dotenv()
-
-# ⭐️ [수정] 3. 'YOUR_API_KEY' 대신 os.getenv()를 사용해 키를 불러옵니다
-API_KEY = os.getenv('GOOGLE_API_KEY')
-
-if not API_KEY:
-    raise ValueError("GOOGLE_API_KEY 환경 변수가 설정되지 않았습니다. .env 파일을 확인하세요.")
-
-# 4. API 키로 클라이언트 설정
-genai.configure(api_key=API_KEY)
-
-# 5. 사용할 모델 선택
-model = genai.GenerativeModel('gemini-2.0-flash')
-
-# 6. 콘텐츠 생성 요청
+# --- 1. 모델 설정 (파일 로드 시 1회 실행) ---
+genai.configure(api_key=config.GENAI_API_KEY)
 try:
-    response = model.generate_content("한양대 에리카에서 가장 가까운 주유소의 위도,경도 좌표를 알려줘")
-    print(response.text)
+    model = genai.GenerativeModel('gemini-2.0-flash')
+except Exception:
+    model = genai.GenerativeModel('gemini-1.5-flash-latest')
 
-except Exception as e:
-    print(f"API 호출 중 오류가 발생했습니다: {e}")
+# --- 2. map_search.py가 호출할 함수 ---
+def analyze_with_gemini(user_input, all_types_list):
+    all_types_string = ", ".join(all_types_list)
+    prompt = f"""
+    사용자의 요청을 분석하여 다음 Google Places API 유형 목록에서 가장 적절한 **한 가지** 유형을 골라주세요.
+    사용자 요청: "{user_input}"
+    [유효한 장소 유형 목록]
+    {all_types_string}
+    응답은 반드시 목록에 있는 유형 **하나만** 포함해야 합니다. (예: "gas_station", "hospital", "park" 등)
+    다른 설명이나 문장은 절대 추가하지 마세요.
+    """
+    try:
+        response = model.generate_content(
+            prompt,
+            generation_config=genai.types.GenerationConfig(candidate_count=1, temperature=0.1)
+        )
+        place_type = response.text.strip().replace("'", "").replace('"', '')
+        print(f"[Gemini] 분석된 장소 유형: {place_type}")
+
+        if place_type not in all_types_list:
+            print(f"[Gemini] 경고: AI가 유효하지 않은 유형({place_type})을 반환했습니다. 'restaurant'로 대체합니다.")
+            return "restaurant"
+        return place_type
+    except Exception as e:
+        print(f"[Gemini] API 오류 발생: {e}")
+        return "restaurant"
